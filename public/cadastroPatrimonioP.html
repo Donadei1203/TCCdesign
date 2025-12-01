@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAPM - Cadastro Patrimônio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="imagens/A.png" type="image/x-icon" style="height: 20px;">
+
+  <!-- CSS Alert Sweel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"/>
+
+  <!-- JS Alert Sweel -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- CSS PROJETO  -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header>
+    <a href="homeP.html"><img class="imgHeader" src="imagens/logo-removebg-preview.png" alt=""></a>
+  
+    <!-- Navegação -->
+    <div class="nav-links">
+      <a href="homeP.html">Home</a>
+      <a href="cadastroPatrimonioP.html" class="selecionado">Cadastro de Patrimônios</a>
+      <a href="controleCamisetas.html">Controle de Camisetas</a>
+      <a href="relatorioTP.html">Relatório Total</a>
+      <a href="buscaNI.html">Busca NI</a>
+      <a href="buscaDescriçao.html">Busca Descrição</a>
+      <a href="buscaLocal.html">Busca por Local</a>
+      <div class="destaque"><a href="Index.html">Sair</a></div>
+    </div>
+  
+    <!-- Menu hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <hr/>
+
+
+  <!-- MAIN - CONTEÚDO -->
+  <main>
+    <div class="containerCadastro">
+      <h1>Cadastro Patrimônio</h1>
+      <hr>
+      <br />
+      <form onsubmit="cadastroPatrimonio(event)">
+        <label>Nome:</label>
+        <input type="text" id="nome" required autofocus />
+
+        <label>Descrição:</label>
+        <input type="text" id="descricao" required autofocus />
+
+        <label>Local:</label>
+        <div class="localcontainer">
+          <input type="text" id="local" required readonly/>
+          <button type="button" onclick="abrirJanela()">Abrir Conteúdo</button>
+
+  <!-- Fundo escurecido -->
+  <div id="fundo" onclick="fecharJanela()"></div>
+
+  <!-- Janela com outros conteúdos -->
+  <div id="janela-conteudo">
+    <span class="btn-fechar" onclick="fecharJanela()"><img src="imagens/fechar.png" alt=""></span>
+    <div>
+      <p>Escolha seu local</p>
+      <hr>
+    </div>
+    <div class="escolha">
+        <!-- Está sendo populado pelo JavaScript através de um laço de repetição/ ForEach -->
+    </div>
+  </div>
+</div>
+
+        <label>Status:</label>
+        <input type="text" id="status" required />
+        <!-- Podemos colocar uma lista de opções para saber se está possivel a utilização, se não está disponivel, quebrado etc. -->
+
+        <label>Valor:</label>
+        <input type="text" id="valor" required />
+
+        <label>Imagem:</label>
+        <input type="file" name="image" accept="image/*" id="img" />
+
+        <br />
+
+        <button id="cadastroP">
+            Cadastrar
+        </button>
+          
+      </form>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div>Copyright 2025 © Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- JS PROJETO -->
+  <script src="/script.js"></script>
+</body>
+</html>

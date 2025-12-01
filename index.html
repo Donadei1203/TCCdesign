@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAPM - Login</title>   
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="imagens/A.png" type="image/x-icon" style="height: 20px;">    
+
+    <!-- CSS Projeto-->
+    <link rel="stylesheet" href="public/css/indexCss.css">
+</head>
+<body>
+    <!-- TELA LOGIN -->
+    <div class="container">
+        <div class="sn">
+            <div>
+                <h1>Sobre Nós</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolores neque unde, repellendus facere blanditiis expedita. Quaerat et explicabo omnis sit eaque ipsam quibusdam quam. Esse maxime quam obcaecati excepturi.</p>
+            </div>
+        </div>
+        <div class="login">    
+            <img src="public/imagens/logo-removebg-preview.png" width="300px" alt="">
+            <h1>Bem-vindo!</h1>
+    
+            <!-- Formulário para Logar -->
+            <form onsubmit="event.preventDefault(); logar();">
+                <input type="text" placeholder="Usuário" id="usuario" required autofocus>
+                <input type="password" placeholder="Senha" id="senha" required>
+                <button type="submit" id="btnEntrar" onclick="logar">Entrar</button>
+            </form> 
+            <p>Esqueceu sua Senha? <a>Clique Aqui</a></p>
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+        
+            <!-- A imagem do erro será exibida aqui -->
+            <div class="erro-container">
+                <img id="imgErro" src="" alt="Erro">
+            </div>
+        
+            <p id="mensagemErro"></p>
+        </div>
+    </div>
+
+    <!-- JS Projeto-->
+    <script src="/script.js"></script>
+</body>
+</html>
